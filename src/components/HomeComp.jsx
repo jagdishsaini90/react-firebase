@@ -123,6 +123,7 @@ const Home = (props) => {
         setInput('');
     }
 
+    console.log(auth.currentUser.photoURL)
 
     return (
         <div className={classes.root}>

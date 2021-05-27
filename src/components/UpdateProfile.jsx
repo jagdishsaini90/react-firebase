@@ -25,7 +25,7 @@ const UpdateProfile = (props) => {
         e.preventDefault();
         if(file) {
             const uploadTask = firebase.storage().ref(`/images/${file.name}`).put(file);
-            uploadTask.on("state_changed", setError(err.message), () => {
+            uploadTask.on("state_changed", console.error, () => {
                 firebase.storage()
                     .ref("images")
                     .child(file.name)
